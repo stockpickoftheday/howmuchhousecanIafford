@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Much House Can I Afford in Saskatchewan? — No Land Transfer Tax</title>
+<meta name="description" content="Saskatchewan has no land transfer tax. ISC title transfer fees (0.4%) and mortgage registration fees, plus 6% PST on the CMHC premium.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">How Much House Can I Afford?</a></p>
+    <p class="tagline">A plain-English calculator for Canadians. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html" class="current">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- AdSense code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+    <section class="page-hero">
+      <h1>Buying a home in Saskatchewan</h1>
+      <p class="lede"><strong>Saskatchewan has no land transfer tax.</strong> What you pay instead are Information Services Corporation (ISC) registration fees — 0.4% of the value to transfer the title, plus a flat fee to register the mortgage.</p>
+    </section>
+
+    <h2>What you pay instead: ISC registration fees</h2>
+    <p>The title transfer fee depends on the value of the title. The mortgage fee is a flat amount that depends on the size of the mortgage.</p>
+    <div class="table-scroll"><table>
+      <tr><th>Title value</th><th class="num">Transfer fee</th></tr>
+      <tr><td>Up to $500</td><td class="num">Free</td></tr>
+      <tr><td>$500.01 to $6,300</td><td class="num">$25 flat</td></tr>
+      <tr><td>Over $6,300</td><td class="num">0.4% of the value</td></tr>
+    </table></div>
+    <div class="table-scroll"><table>
+      <tr><th>Mortgage amount</th><th class="num">Mortgage fee</th></tr>
+      <tr><td>Under $250,000</td><td class="num">$200</td></tr>
+      <tr><td>$250,000 to $500,000</td><td class="num">$275</td></tr>
+      <tr><td>$500,000.01 to $750,000</td><td class="num">$525</td></tr>
+      <tr><td>$750,000.01 to $1,000,000</td><td class="num">$775</td></tr>
+      <tr><td>Over $1,000,000</td><td class="num">$1,000</td></tr>
+    </table></div>
+    <p>On a $400,000 home with a $320,000 mortgage, the fees are $1,600 to transfer the title plus $275 to register the mortgage — <strong>$1,875</strong> in total. These rates took effect April 15, 2026; the transfer fee used to be 0.3%, so older calculators still quote the old rate.</p>
+
+    <h2>First-time buyers and the CMHC premium</h2>
+    <p>There is no first-time buyer rebate on these fees, because there is no tax to rebate. Saskatchewan's First-Time Homebuyers' Tax Credit is claimed on your income tax return, not at closing. One cost that does catch buyers out: <strong>Saskatchewan charges 6% PST on the CMHC premium</strong>, and it must be paid in cash at closing — it cannot be added to the mortgage.</p>
+
+    <div class="ad-slot" data-ad-slot="in-content"><!-- AdSense code goes here when approved --></div>
+    <section class="calc-box" id="ltt-calculator" aria-label="Saskatchewan registration fees on any price">
+      <h2>Try it: Saskatchewan registration fees on any price</h2>
+      <div class="field">
+        <label for="ltt-price">Purchase price</label>
+        <span class="money-input"><span>$</span><input type="number" id="ltt-price" data-ltt="saskatchewan" value="400000" min="0" step="1000" inputmode="numeric"></span>
+      </div>
+      <div class="field">
+        <label for="ltt-mortgage">Mortgage amount</label>
+        <span class="money-input"><span>$</span><input type="number" id="ltt-mortgage" value="320000" min="0" step="1000" inputmode="numeric"></span>
+        <span class="hint">Defaults to 80% of the price. The mortgage fee is charged on this amount, including any CMHC premium added to it.</span>
+      </div>
+      <p id="ltt-result" aria-live="polite"></p>
+    </section>
+    <h2>Worked example — a Saskatchewan buyer</h2>
+<p>A household earning <strong>$100,000 a year</strong>, with <strong>$500 a month</strong> in other debts, <strong>$50,000</strong> saved, a <strong>5%</strong> rate and a <strong>25-year</strong> amortization. Property tax $3,600 a year, heating $150 a month, no condo fees.</p>
+    <div class="example">
+      <dl>
+        <dt>Most house you can afford</dt>
+        <dd><strong>$422,815</strong></dd>
+        <dt>Comfortable price (12% below the max)</dt>
+        <dd>$372,078</dd>
+        <dt>Monthly payment at 5%</dt>
+        <dd>$2,247</dd>
+        <dt>CMHC premium (3.10%)</dt>
+        <dd>$11,557</dd>
+        <dt>Saskatchewan PST on the CMHC premium (6%, cash)</dt>
+        <dd>$693</dd>
+        <dt>Saskatchewan Land Titles fees</dt>
+        <dd>$1,966 ($1,691 transfer + $275 mortgage)</dd>
+
+        <dt>Cash to close</dt>
+        <dd>$65,717 ($54,160 out of pocket if the premium goes on the mortgage)</dd>
+      </dl>
+    </div>
+    <p><a href="index.html">Run your own numbers in the main calculator</a> — pick Saskatchewan to see the same result.</p>    <h2>More things to know</h2>
+    <ul>
+      <li><strong>The 0.4% transfer fee is new.</strong> It rose from 0.3% on April 15, 2026 — if a calculator quotes 0.3%, it is out of date.</li>
+      <li><strong>The mortgage fee is flat, not a percentage.</strong> A $400,000 mortgage and a $499,000 mortgage cost the same $275 to register.</li>
+      <li><strong>Only Ontario, Quebec and Saskatchewan tax the CMHC premium.</strong> In every other province the premium itself is the only cost.</li>
+    </ul>
+
+
+    <p class="note">Figures verified November 2026. Tax rules change — confirm them with your lawyer or notary before closing. This page is educational only, not financial advice.</p>
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- AdSense code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>How Much House Can I Afford? (Canada) — an educational calculator. Not financial advice. Figures verified November 2026; rates and tax rules change, so confirm them with your lender or lawyer before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

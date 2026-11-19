@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Much House Can I Afford in BC? — Property Transfer Tax 2026</title>
+<meta name="description" content="BC property transfer tax brackets, the first-time buyer exemption (full exemption to $500,000, $8,000 off to $835,000), and a worked affordability example for British Columbia.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">How Much House Can I Afford?</a></p>
+    <p class="tagline">A plain-English calculator for Canadians. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html" class="current">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- AdSense code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+    <section class="page-hero">
+      <h1>Buying a home in British Columbia</h1>
+      <p class="lede">BC calls its land transfer tax the <strong>property transfer tax (PTT)</strong>. It is usually the biggest closing cost after the down payment — but first-time buyers can pay nothing at all on a home up to $500,000.</p>
+    </section>
+
+    <h2>BC property transfer tax rates</h2>
+    <p>Each rate applies only to the part of the price inside that bracket, not to the whole price.</p>
+    <div class="table-scroll"><table>
+      <tr><th>Part of the price</th><th class="num">Rate</th></tr>
+      <tr><td>First $200,000</td><td class="num">1%</td></tr>
+      <tr><td>$200,001 to $2,000,000</td><td class="num">2%</td></tr>
+      <tr><td>$2,000,001 to $3,000,000</td><td class="num">3%</td></tr>
+      <tr><td>Over $3,000,000 (residential)</td><td class="num">5%</td></tr>
+    </table></div>
+    <p>On a $750,000 home the tax is 1% of $200,000 ($2,000) plus 2% of $550,000 ($11,000) — <strong>$13,000</strong> in total. On a $1,500,000 home it is $2,000 + $26,000 = <strong>$28,000</strong>.</p>
+
+    <h2>First-time buyer exemption</h2>
+    <p>If you have never owned a home anywhere in the world, and the home will be your principal residence, the exemption is:</p>
+    <div class="table-scroll"><table>
+      <tr><th>Fair market value</th><th>Exemption</th></tr>
+      <tr><td>$500,000 or less</td><td><strong>Full exemption — no tax to pay</strong></td></tr>
+      <tr><td>Over $500,000 to $835,000</td><td>$8,000 off (the tax on the first $500,000)</td></tr>
+      <tr><td>Over $835,000 to under $860,000</td><td>Phases out proportionally</td></tr>
+      <tr><td>$860,000 or more</td><td>No exemption</td></tr>
+    </table></div>
+    <p>So a first-time buyer pays <strong>$5,000</strong> on a $750,000 home ($13,000 tax minus the $8,000 exemption) and <strong>$0</strong> on a $480,000 home. These are the rules in force since April 1, 2024 — the old $525,000 partial-exemption limit no longer applies. Buyers of newly built homes get a separate exemption: full relief up to $1,100,000, partial to $1,150,000.</p>
+
+    <section class="calc-box" id="ltt-calculator" aria-label="BC property transfer tax calculator">
+      <h2>Try it: BC property transfer tax on any price</h2>
+      <div class="field">
+        <label for="ltt-price">Purchase price</label>
+        <span class="money-input"><span>$</span><input type="number" id="ltt-price" data-ltt="bc" value="750000" min="0" step="1000" inputmode="numeric"></span>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="ltt-first-time" checked> I am a first-time buyer</label>
+      </div>
+      <p id="ltt-result" aria-live="polite"></p>
+    </section>
+    <div class="ad-slot" data-ad-slot="in-content"><!-- AdSense code goes here when approved --></div>
+
+
+    <h2>Worked example — a BC first-time buyer</h2>
+    <p>A household earning <strong>$100,000 a year</strong>, with <strong>$500 a month</strong> in other debts, <strong>$50,000</strong> saved, a <strong>5%</strong> rate and a <strong>25-year</strong> amortization. Property tax $3,600 a year, heating $150 a month, no condo fees.</p>
+    <div class="example">
+      <dl>
+        <dt>Most house you can afford</dt>
+        <dd><strong>$422,815</strong></dd>
+        <dt>Comfortable price (12% below the max)</dt>
+        <dd>$372,078</dd>
+        <dt>Monthly payment at 5%</dt>
+        <dd>$2,247</dd>
+        <dt>CMHC premium (3.10%)</dt>
+        <dd>$11,557</dd>
+        <dt>BC property transfer tax</dt>
+        <dd>$6,456 — all saved, $0 to pay</dd>
+        <dt>Cash to close</dt>
+        <dd>$63,057 ($51,500 out of pocket if the premium goes on the mortgage)</dd>
+      </dl>
+    </div>
+    <p><a href="index.html">Run your own numbers in the main calculator</a> — pick British Columbia and tick "first-time buyer" to see the same result.</p>
+
+    <h2>Two more BC things to know</h2>
+    <ul>
+      <li><strong>Property tax is low for the price.</strong> BC's residential property tax rates are among the lowest in Canada — roughly 0.3% to 0.5% of the value in Vancouver — which is why the calculator's $3,600-a-year default is about right for a mid-priced BC home.</li>
+      <li><strong>Foreign buyers pay 20% extra.</strong> If you are not a Canadian citizen or permanent resident, an additional 20% tax applies on residential property in Metro Vancouver, the Fraser Valley, Victoria and some other areas.</li>
+    </ul>
+
+    <p class="note">Figures verified November 2026. Tax rules change — confirm them with your lawyer or notary before closing. This page is educational only, not financial advice.</p>
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- AdSense code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>How Much House Can I Afford? (Canada) — an educational calculator. Not financial advice. Figures verified November 2026; rates and tax rules change, so confirm them with your lender or lawyer before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

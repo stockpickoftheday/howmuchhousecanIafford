@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Much House Can I Afford? — Canadian Calculator</title>
+<meta name="description" content="A plain-English calculator that shows the most house you can afford in Canada, using the mortgage stress test and the 39% / 44% debt limits. Includes land transfer tax and cash to close for every province and territory in Canada.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">How Much House Can I Afford?</a></p>
+    <p class="tagline">A plain-English calculator for Canadians. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html" class="current">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- AdSense code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Canada &middot; Mortgage stress test included</p>
+      <h1>How much house can I afford in Canada?</h1>
+      <p class="lede">Type in your numbers and find out the most a lender would likely let you borrow — and the price that is actually comfortable. Everything runs in your browser. Nothing you type is sent anywhere.</p>
+      <ul class="chips">
+        <li>&#10003; No sign-up</li>
+        <li>&#10003; Nothing leaves your browser</li>
+        <li>&#10003; All 13 provinces &amp; territories</li>
+      </ul>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Affordability calculator">
+        <h2>Your numbers</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="income">Gross household income (per year)</label>
+            <span class="money-input"><span>$</span><input type="number" id="income" value="100000" min="0" step="1000" inputmode="numeric"></span>
+            <span class="hint">Before tax, both incomes together if you are buying as a couple.</span>
+          </div>
+          <div class="field">
+            <label for="debts">Other monthly debts</label>
+            <span class="money-input"><span>$</span><input type="number" id="debts" value="500" min="0" step="10" inputmode="numeric"></span>
+            <span class="hint">Car loans, credit cards, student loans, lines of credit — the minimum payments.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="down">Down payment saved</label>
+            <span class="money-input"><span>$</span><input type="number" id="down" value="50000" min="0" step="1000" inputmode="numeric"></span>
+            <span class="hint">Minimum is 5% of the first $500,000 and 10% of the rest.</span>
+          </div>
+          <div class="field">
+            <label for="rate">Mortgage rate (%)</label>
+            <input type="number" id="rate" value="5" min="0" step="0.05" inputmode="decimal">
+            <span class="hint">The rate your lender offers. You still qualify at the stress-test rate.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="amort">Amortization</label>
+            <select id="amort">
+              <option value="30">30 years</option>
+              <option value="25" selected>25 years</option>
+              <option value="20">20 years</option>
+              <option value="15">15 years</option>
+              <option value="10">10 years</option>
+            </select>
+            <span class="hint">How long to pay the mortgage off. 30 years is only available on insured mortgages for first-time buyers and new builds.</span>
+          </div>
+          <div class="field">
+            <label for="tax">Property tax (per year)</label>
+            <span class="money-input"><span>$</span><input type="number" id="tax" value="3600" min="0" step="100" inputmode="numeric"></span>
+            <span class="hint">Your best guess is fine — about 0.5% of the price is typical.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="heating">Heating (per month)</label>
+            <span class="money-input"><span>$</span><input type="number" id="heating" value="150" min="0" step="10" inputmode="numeric"></span>
+          </div>
+          <div class="field">
+            <label for="condo">Condo or strata fees (per month)</label>
+            <span class="money-input"><span>$</span><input type="number" id="condo" value="0" min="0" step="10" inputmode="numeric"></span>
+            <span class="hint">Put 0 if you are buying a house. Lenders count half of this in your housing costs.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="province">Province (for land transfer tax)</label>
+            <select id="province">
+              <option value="bc" selected>British Columbia</option>
+              <option value="alberta">Alberta</option>
+              <option value="saskatchewan">Saskatchewan</option>
+              <option value="manitoba">Manitoba</option>
+              <option value="ontario">Ontario</option>
+              <option value="quebec">Quebec</option>
+              <option value="newbrunswick">New Brunswick</option>
+              <option value="novascotia">Nova Scotia</option>
+              <option value="pei">Prince Edward Island</option>
+              <option value="newfoundland">Newfoundland and Labrador</option>
+              <option value="yukon">Yukon</option>
+              <option value="nwt">Northwest Territories</option>
+              <option value="nunavut">Nunavut</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" id="first-time" checked> I am a first-time buyer</label>
+            <span class="hint">First-time buyers pay less in BC, Ontario and Prince Edward Island — and in Quebec they get a tax credit back after they pay.</span>
+          </div>
+        </div>
+
+        <p><button type="button" class="example-btn" id="load-example">Try the example: $100,000 income</button></p>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">Most house you can afford</p>
+          <p class="big" id="out-max">—</p>
+          <p class="big-sub">Comfortable price: <strong id="out-comfortable">—</strong></p>
+          <dl>
+            <div class="row">
+              <dt>Monthly mortgage payment (at your rate)</dt>
+              <dd id="out-payment">—</dd>
+            </div>
+            <div class="row">
+              <dt>Mortgage amount (including CMHC insurance)</dt>
+              <dd id="out-mortgage">—</dd>
+            </div>
+            <div class="row">
+              <dt>CMHC insurance premium</dt>
+              <dd id="out-cmhc">—</dd>
+            </div>
+            <div class="row">
+              <dt>Stress-test rate you qualify at</dt>
+              <dd id="out-qualify">—</dd>
+            </div>
+            <div class="row">
+              <dt>What limits you</dt>
+              <dd id="out-binding">—</dd>
+            </div>
+          </dl>
+          <h3>Cash to close</h3>
+          <dl>
+            <div class="row">
+              <dt>Down payment</dt>
+              <dd id="out-down">—</dd>
+            </div>
+            <div class="row">
+              <dt id="out-ltt-label">Land transfer tax:</dt>
+              <dd id="out-ltt">—</dd>
+            </div>
+            <div class="row">
+              <dt>Legal fees (estimate)</dt>
+              <dd id="out-legal">—</dd>
+            </div>
+            <div class="row">
+              <dt>CMHC insurance premium</dt>
+              <dd id="out-cmhc2">—</dd>
+            </div>
+            <div class="row" id="row-pst" style="display:none">
+              <dt id="row-pst-dt">Ontario PST on the CMHC premium (8%, cash)</dt>
+              <dd id="row-pst-dd">—</dd>
+            </div>
+            <div class="row total-row">
+              <dt>Cash to close</dt>
+              <dd id="out-cash-total">—</dd>
+            </div>
+            <div class="row">
+              <dt>Cash out of pocket if the premium goes on the mortgage</dt>
+              <dd id="out-cash-pocket">—</dd>
+            </div>
+          </dl>
+          <p class="note">The CMHC premium is usually added to your mortgage, not paid in cash — that is why the out-of-pocket number is lower. The total above shows everything as if you paid the premium up front.</p>
+        </div>
+
+        <div class="no-result" id="no-result" style="display:none">
+          <p><strong>No price works with these numbers.</strong></p>
+          <p id="no-result-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="sticky-bar" style="display:none"><span>You can afford up to</span><strong id="sticky-max">—</strong></div>
+
+    <div class="ad-slot" data-ad-slot="in-content"><!-- AdSense code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <p>A household earning <strong>$100,000 a year</strong>, with <strong>$500 a month</strong> in other debts, <strong>$50,000</strong> saved for a down payment, a <strong>5%</strong> mortgage rate and a <strong>25-year</strong> amortization, in BC as a first-time buyer. Property tax $3,600 a year, heating $150 a month, no condo fees.</p>
+      <dl>
+        <dt>Qualifying (stress-test) rate</dt>
+        <dd>7% (5% + 2%)</dd>
+        <dt>Monthly housing budget</dt>
+        <dd>$3,167 (TDS limit — this is what binds)</dd>
+        <dt>Mortgage payment the budget allows</dt>
+        <dd>$2,717 a month at the 7% stress-test rate</dd>
+        <dt>Most house you can afford</dt>
+        <dd><strong>$422,815</strong></dd>
+        <dt>Comfortable price (12% below the max)</dt>
+        <dd>$372,078</dd>
+        <dt>CMHC insurance premium (3.10%, down payment is 11.83%)</dt>
+        <dd>$11,557</dd>
+        <dt>Mortgage, premium included</dt>
+        <dd>$384,373</dd>
+        <dt>Monthly payment at the real rate of 5%</dt>
+        <dd>$2,247</dd>
+        <dt>BC property transfer tax</dt>
+        <dd>$6,456, all saved by the first-time buyer exemption — $0 to pay</dd>
+        <dt>Cash to close</dt>
+        <dd>$63,057 ($51,500 out of pocket if the premium goes on the mortgage)</dd>
+      </dl>
+      <p>Press "Try the example" above and the calculator will show these same numbers. Rates and tax figures verified November 2026.</p>
+    </section>
+
+    <h2>How the number is worked out</h2>
+
+    <h3>The stress test</h3>
+    <p>Your lender does not qualify you at the rate they offer. They qualify you at the higher of your rate plus 2%, or 5.25%. So a 5% mortgage means you must prove you could pay at 7%. That is the rule for every insured mortgage in Canada, and most lenders use it for uninsured ones too. It is the reason the maximum is lower than many people expect — it protects you if rates rise.</p>
+
+    <h3>GDS and TDS — the 39% and 44% limits</h3>
+    <p>Two ratios decide how much housing cost you can carry:</p>
+    <ul>
+      <li><strong>GDS (gross debt service), 39%:</strong> your housing costs — mortgage payment at the stress-test rate, property tax, heating, and half of any condo fees — must be no more than 39% of your gross monthly income.</li>
+      <li><strong>TDS (total debt service), 44%:</strong> the same housing costs plus all your other monthly debt payments must be no more than 44% of your gross monthly income.</li>
+    </ul>
+    <p>The calculator works out both and uses whichever gives the smaller number. In the example above, TDS is what limits the price, because of the $500 a month in other debts.</p>
+
+    <h3>CMHC insurance</h3>
+    <p>If your down payment is under 20% of the price, your mortgage must have default insurance — usually called CMHC insurance, though Sagen and Canada Guaranty sell the same thing. It protects the lender, not you. The premium is a percentage of the mortgage: 4.00% with 5% to 9.99% down, 3.10% with 10% to 14.99% down, and 2.80% with 15% to 19.99% down. Amortizations over 25 years add 0.20%. The premium is normally added to your mortgage, so you pay interest on it too. With 20% or more down, there is no premium at all. Insured mortgages are only available on homes under $1.5 million.</p>
+
+    <h3>Down payment</h3>
+    <p>The minimum down payment in Canada is 5% of the first $500,000 of the price, plus 10% of the part above $500,000. So a $750,000 home needs at least $50,000 down. A bigger down payment helps twice: it lowers your mortgage, and it can drop you into a cheaper CMHC premium tier — crossing from 9.99% to 10% down cuts the premium rate from 4.00% to 3.10%.</p>
+
+    <h3>Land transfer tax</h3>
+    <p>It depends on where you buy. BC, Ontario, Manitoba, Quebec, New Brunswick, Nova Scotia and Prince Edward Island charge a tax on the price; Alberta, Saskatchewan, Newfoundland and Labrador and the three territories charge registration fees instead. First-time buyers pay less in BC, Ontario and PEI, and get a tax credit back later in Quebec. Pick your province in the calculator to see your number, or read the province pages: <a href="bc.html">British Columbia</a>, <a href="alberta.html">Alberta</a>, <a href="sk.html">Saskatchewan</a>, <a href="mb.html">Manitoba</a>, <a href="ontario.html">Ontario</a>, <a href="qc.html">Quebec</a>, <a href="nb.html">New Brunswick</a>, <a href="ns.html">Nova Scotia</a>, <a href="pei.html">Prince Edward Island</a>, <a href="nl.html">Newfoundland and Labrador</a>, <a href="yt.html">Yukon</a>, <a href="nt.html">Northwest Territories</a>, <a href="nu.html">Nunavut</a>.</p>
+
+    <h3>Cash to close</h3>
+    <p>The down payment is not the whole bill. On closing day you also need the land transfer tax (after any first-time buyer relief), about $1,500 in legal fees, and the CMHC premium if you have one. The calculator adds them up, and also shows the smaller out-of-pocket number for the usual case where the premium is rolled into the mortgage.</p>
+
+    <p class="note">This calculator is an estimate for education only. It is not financial advice, and a lender's real answer depends on your credit, your job history and the home itself. Confirm the numbers with a mortgage broker or your bank before you make an offer.</p>
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- AdSense code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>How Much House Can I Afford? (Canada) — an educational calculator. Not financial advice. Figures verified November 2026; rates and tax rules change, so confirm them with your lender or lawyer before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

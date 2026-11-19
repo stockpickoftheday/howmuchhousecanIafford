@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Much House Can I Afford in Ontario? — Land Transfer Tax 2026</title>
+<meta name="description" content="Ontario land transfer tax brackets, the $4,000 first-time buyer rebate, Toronto's extra municipal tax, and a worked affordability example for Ontario.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">How Much House Can I Afford?</a></p>
+    <p class="tagline">A plain-English calculator for Canadians. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html" class="current">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- AdSense code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+    <section class="page-hero">
+      <h1>Buying a home in Ontario</h1>
+      <p class="lede">Ontario charges land transfer tax on every home purchase, on a sliding scale. First-time buyers get up to $4,000 back — and buyers inside the City of Toronto pay a second, municipal tax on top.</p>
+    </section>
+
+    <h2>Ontario land transfer tax rates</h2>
+    <p>Each rate applies only to the part of the price inside that bracket, not to the whole price.</p>
+    <div class="table-scroll"><table>
+      <tr><th>Part of the price</th><th class="num">Rate</th></tr>
+      <tr><td>First $55,000</td><td class="num">0.5%</td></tr>
+      <tr><td>$55,001 to $250,000</td><td class="num">1%</td></tr>
+      <tr><td>$250,001 to $400,000</td><td class="num">1.5%</td></tr>
+      <tr><td>$400,001 to $2,000,000</td><td class="num">2%</td></tr>
+      <tr><td>Over $2,000,000 (one or two units)</td><td class="num">2.5%</td></tr>
+    </table></div>
+    <p>On a $500,000 home the tax is $275 + $1,950 + $2,250 + $2,000 = <strong>$6,475</strong>. On a $750,000 home it is <strong>$11,475</strong>.</p>
+
+    <h2>First-time buyer rebate — up to $4,000</h2>
+    <p>If you have never owned a home anywhere in the world, are 18 or older, a Canadian citizen or permanent resident, and will live in the home as your principal residence within nine months, Ontario refunds up to $4,000 of the tax. That covers the whole tax on a home up to about $368,000. Above that, the refund is still $4,000 and you pay the difference — so a first-time buyer pays <strong>$2,475</strong> on a $500,000 home and <strong>$7,475</strong> on a $750,000 home.</p>
+
+    <h2>Buying in Toronto? There is a second tax</h2>
+    <p>Inside the City of Toronto, the municipal land transfer tax applies on top of the provincial one, using the same brackets up to $3 million (with higher rates above $3 million since April 1, 2026). Toronto also has its own first-time buyer rebate of up to $4,475, so a qualifying Toronto buyer can save up to $8,475 in total. Everywhere else in Ontario, only the provincial tax applies.</p>
+
+    <h2>Ontario's other closing cost: PST on the CMHC premium</h2>
+    <p>Ontario is one of three provinces that charges sales tax on the CMHC insurance premium — 8% of the premium, payable in cash at closing. It cannot be added to the mortgage. On an $11,557 premium that is $925. The main calculator adds this line automatically when Ontario is selected.</p>
+
+    <section class="calc-box" id="ltt-calculator" aria-label="Ontario land transfer tax calculator">
+      <h2>Try it: Ontario land transfer tax on any price</h2>
+      <div class="field">
+        <label for="ltt-price">Purchase price</label>
+        <span class="money-input"><span>$</span><input type="number" id="ltt-price" data-ltt="ontario" value="500000" min="0" step="1000" inputmode="numeric"></span>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="ltt-first-time" checked> I am a first-time buyer</label>
+      </div>
+      <p id="ltt-result" aria-live="polite"></p>
+      <p class="hint">This is the provincial tax only. Inside Toronto, add the municipal tax on top.</p>
+    </section>
+    <div class="ad-slot" data-ad-slot="in-content"><!-- AdSense code goes here when approved --></div>
+
+
+    <h2>Worked example — an Ontario first-time buyer</h2>
+    <p>A household earning <strong>$100,000 a year</strong>, with <strong>$500 a month</strong> in other debts, <strong>$50,000</strong> saved, a <strong>5%</strong> rate and a <strong>25-year</strong> amortization. Property tax $3,600 a year, heating $150 a month, no condo fees.</p>
+    <div class="example">
+      <dl>
+        <dt>Most house you can afford</dt>
+        <dd><strong>$422,815</strong></dd>
+        <dt>Comfortable price (12% below the max)</dt>
+        <dd>$372,078</dd>
+        <dt>Monthly payment at 5%</dt>
+        <dd>$2,247</dd>
+        <dt>CMHC premium (3.10%)</dt>
+        <dd>$11,557</dd>
+        <dt>Ontario land transfer tax</dt>
+        <dd>$4,931, minus the $4,000 rebate — $931 to pay</dd>
+        <dt>Ontario PST on the premium (8%)</dt>
+        <dd>$925</dd>
+        <dt>Cash to close</dt>
+        <dd>$64,913 ($53,356 out of pocket if the premium goes on the mortgage)</dd>
+      </dl>
+    </div>
+    <p><a href="index.html">Run your own numbers in the main calculator</a> — pick Ontario and tick "first-time buyer" to see the same result.</p>
+
+    <p class="note">Figures verified November 2026. Tax rules change — confirm them with your lawyer before closing. This page is educational only, not financial advice.</p>
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- AdSense code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>How Much House Can I Afford? (Canada) — an educational calculator. Not financial advice. Figures verified November 2026; rates and tax rules change, so confirm them with your lender or lawyer before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Much House Can I Afford in Quebec? — Welcome Tax 2026</title>
+<meta name="description" content="Quebec welcome tax brackets, Montreal's higher rates, the $5,875 first-time buyer credit, and a worked affordability example.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">How Much House Can I Afford?</a></p>
+    <p class="tagline">A plain-English calculator for Canadians. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html" class="current">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- AdSense code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+    <section class="page-hero">
+      <h1>Buying a home in Quebec</h1>
+      <p class="lede">Quebec calls its land transfer tax the <strong>welcome tax</strong> — <em>droit de mutation immobilière</em>. It is charged by the municipality, not the province, and the bill arrives in the mail <strong>after</strong> closing, not on closing day.</p>
+    </section>
+
+    <h2>Quebec welcome tax rates (2026)</h2>
+    <p>Each rate applies only to the part of the price inside that bracket. These are the provincial base brackets — they apply in every Quebec municipality.</p>
+    <div class="table-scroll"><table>
+      <tr><th>Part of the price</th><th class="num">Rate</th></tr>
+      <tr><td>First $62,900</td><td class="num">0.5%</td></tr>
+      <tr><td>$62,901 to $315,000</td><td class="num">1%</td></tr>
+      <tr><td>Over $315,000</td><td class="num">1.5%</td></tr>
+    </table></div>
+    <p>On a $500,000 home the tax is <strong>$5,611</strong> anywhere in Quebec. On a $600,000 home it is <strong>$7,111</strong> — unless you are in Montreal.</p>
+
+    <h2>Montreal charges more</h2>
+    <p>Montreal adds higher tiers on expensive homes. Other cities, including Laval, Quebec City and Longueuil, add their own tiers above $500,000 too, but Montreal goes highest.</p>
+    <div class="table-scroll"><table>
+      <tr><th>Part of the price (Montreal)</th><th class="num">Rate</th></tr>
+      <tr><td>First $62,900</td><td class="num">0.5%</td></tr>
+      <tr><td>$62,901 to $315,000</td><td class="num">1%</td></tr>
+      <tr><td>$315,001 to $552,300</td><td class="num">1.5%</td></tr>
+      <tr><td>$552,301 to $1,104,700</td><td class="num">2%</td></tr>
+      <tr><td>$1,104,701 to $2,136,500</td><td class="num">2.5%</td></tr>
+      <tr><td>$2,136,501 to $3,113,000</td><td class="num">3.5%</td></tr>
+      <tr><td>Over $3,113,000</td><td class="num">4%</td></tr>
+    </table></div>
+    <p>On a $600,000 home in Montreal the tax is <strong>$7,349</strong> (vs $7,111 elsewhere). On a $750,000 home it is <strong>$10,349</strong> in Montreal (vs $9,361 elsewhere). On a $1,000,000 home it is <strong>$15,349</strong> in Montreal (vs $13,111 elsewhere).</p>
+
+    <h2>First-time buyers: a credit back later, not a discount now</h2>
+    <p>Since January 1, 2026, Quebec refunds first-time buyers part of the welcome tax through a <strong>refundable tax credit of up to $5,875</strong>: 100% of the first $5,000 of duties plus 25% of the next $3,500. It phases out above a $750,000 price and is nil at $1,000,000. You must intend to live in the home as your principal residence, and neither you nor your spouse can have lived in a home you owned in the year of purchase or the four years before. <strong>You pay the municipal bill in full first</strong> and claim the credit on your Quebec income tax return — so it does not reduce the cash you need at closing. From October 2026, Revenu Québec will advance the credit once the bill is paid, but only if it is more than $1,000. Montreal's own municipal first-time buyer program has ended.</p>
+
+    <h2>Quebec taxes the CMHC premium too</h2>
+    <p>The CMHC premium itself is added to your mortgage, but Quebec's tax on insurance premiums is not — you pay it in cash at the notary. The rate is <strong>9% for premiums paid by December 31, 2026</strong>, rising to <strong>9.975% for premiums paid after that date</strong>. On the $11,557 premium in the example below, that is $1,040 in 2026.</p>
+
+    <div class="ad-slot" data-ad-slot="in-content"><!-- AdSense code goes here when approved --></div>
+    <section class="calc-box" id="ltt-calculator" aria-label="Quebec welcome tax on any price">
+      <h2>Try it: Quebec welcome tax on any price</h2>
+      <div class="field">
+        <label for="ltt-price">Purchase price</label>
+        <span class="money-input"><span>$</span><input type="number" id="ltt-price" data-ltt="quebec" value="500000" min="0" step="1000" inputmode="numeric"></span>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="ltt-first-time" checked> I am a first-time buyer</label>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="ltt-montreal"> Buying in Montreal (higher brackets apply)</label>
+      </div>
+      <p id="ltt-result" aria-live="polite"></p>
+    </section>
+    <h2>Worked example — a Quebec first-time buyer</h2>
+<p>A household earning <strong>$100,000 a year</strong>, with <strong>$500 a month</strong> in other debts, <strong>$50,000</strong> saved, a <strong>5%</strong> rate and a <strong>25-year</strong> amortization. Property tax $3,600 a year, heating $150 a month, no condo fees.</p>
+    <div class="example">
+      <dl>
+        <dt>Most house you can afford</dt>
+        <dd><strong>$422,815</strong></dd>
+        <dt>Comfortable price (12% below the max)</dt>
+        <dd>$372,078</dd>
+        <dt>Monthly payment at 5%</dt>
+        <dd>$2,247</dd>
+        <dt>CMHC premium (3.10%)</dt>
+        <dd>$11,557</dd>
+        <dt>Quebec tax on the CMHC premium (9%, cash)</dt>
+        <dd>$1,040</dd>
+        <dt>First-time buyer credit (claimed later)</dt>
+        <dd>$4,453 back on your tax return</dd>
+        <dt>Quebec welcome tax (provincial brackets)</dt>
+        <dd>$4,453</dd>
+
+        <dt>Cash to close</dt>
+        <dd>$68,550 ($56,993 out of pocket if the premium goes on the mortgage)</dd>
+      </dl>
+    </div>
+    <p><a href="index.html">Run your own numbers in the main calculator</a> — pick Quebec and tick "first-time buyer" to see the same result.</p>    <h2>More things to know</h2>
+    <ul>
+      <li><strong>The bill comes after closing.</strong> The municipality mails it once the deed is registered, and payment is due within about 30 days — budget for it even though it is not on the closing-day bill.</li>
+      <li><strong>The tax is charged on the highest of three numbers:</strong> the price you paid, the amount in the deed, or the municipal assessment times the city's comparative factor (1.00 in Montreal for 2026).</li>
+      <li><strong>New homes also pay GST (5%) and QST (9.975%)</strong> on the price, with partial rebates — a separate cost your notary will work out.</li>
+    </ul>
+
+
+    <p class="note">Figures verified November 2026. Tax rules change — confirm them with your lawyer or notary before closing. This page is educational only, not financial advice.</p>
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- AdSense code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculator</a>
+      <a href="bc.html">British Columbia</a>
+      <a href="alberta.html">Alberta</a>
+      <a href="sk.html">Saskatchewan</a>
+      <a href="mb.html">Manitoba</a>
+      <a href="ontario.html">Ontario</a>
+      <a href="qc.html">Quebec</a>
+      <a href="nb.html">New Brunswick</a>
+      <a href="ns.html">Nova Scotia</a>
+      <a href="pei.html">Prince Edward Island</a>
+      <a href="nl.html">Newfoundland and Labrador</a>
+      <a href="yt.html">Yukon</a>
+      <a href="nt.html">Northwest Territories</a>
+      <a href="nu.html">Nunavut</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>How Much House Can I Afford? (Canada) — an educational calculator. Not financial advice. Figures verified November 2026; rates and tax rules change, so confirm them with your lender or lawyer before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>
