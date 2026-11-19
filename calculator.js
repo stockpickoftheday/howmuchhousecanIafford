@@ -534,6 +534,23 @@
     });
     if (document.getElementById('calculator')) updateMain();
 
+    /* Tap a number box and it clears, so you can just type the new
+       number instead of deleting the old one. Tap away without
+       typing and the old number comes back. */
+    var numberInputs = document.querySelectorAll('#calculator input[type="number"], #ltt-calculator input[type="number"]');
+    numberInputs.forEach(function (el) {
+      el.addEventListener('focus', function () {
+        el.setAttribute('data-old-value', el.value);
+        el.value = '';
+      });
+      el.addEventListener('blur', function () {
+        if (el.value === '') {
+          el.value = el.getAttribute('data-old-value') || '';
+          if (el.value !== '') el.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      });
+    });
+
     var lttInputs = document.querySelectorAll('#ltt-calculator input');
     lttInputs.forEach(function (el) {
       el.addEventListener('input', updateLTT);
